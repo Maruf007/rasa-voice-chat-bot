@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-camera",
+      "2": "I-camera",
+      "3": "L-camera",
+      "4": "U-camera",
+      "5": "B-category",
+      "6": "I-category",
+      "7": "L-category",
+      "8": "U-category",
+      "9": "B-price",
+      "10": "I-price",
+      "11": "L-price",
+      "12": "U-price",
+      "13": "B-ram",
+      "14": "I-ram",
+      "15": "L-ram",
+      "16": "U-ram",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-camera": 1,
+      "I-camera": 2,
+      "L-camera": 3,
+      "U-camera": 4,
+      "B-category": 5,
+      "I-category": 6,
+      "L-category": 7,
+      "U-category": 8,
+      "B-price": 9,
+      "I-price": 10,
+      "L-price": 11,
+      "U-price": 12,
+      "B-ram": 13,
+      "I-ram": 14,
+      "L-ram": 15,
+      "U-ram": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

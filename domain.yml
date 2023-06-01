@@ -1,0 +1,66 @@
+version: '3.1'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - buy_phone_laptop
+  - give_information
+  - not_applicable
+
+entities:
+  - category
+  - ram
+  - price
+  - camera
+
+slots:
+  category:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: category
+
+  ram:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ram
+  price:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: price
+  camera:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: camera
+responses:
+  utter_how_can_I_help:
+  - text: Welcome. I'm your shopping bot. I can help you in finding a phone or a laptop
+  utter_ask_camera:
+  - text: What megapixel camera are you looking for? (Write na if not applicable)
+  - text: What megapixel camera are you looking for? (Write na if not applicable)
+  utter_ask_price:
+  - text: What is your budget?
+  utter_ask_ram:
+  - text: How much GB RAM are you looking for?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+  - action_search_results
+  - utter_iamabot
+  - utter_ask_ram
+  - utter_goodbye
+  - utter_how_can_I_help
+  - utter_ask_camera
+  - utter_ask_price
+forms: {}
+e2e_actions: []

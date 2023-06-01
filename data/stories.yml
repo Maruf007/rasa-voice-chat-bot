@@ -1,0 +1,69 @@
+version: "3.1"
+stories:
+
+- story: first_path
+  steps:
+  - intent: greet
+  - action: utter_how_can_I_help
+  - intent: buy_phone_laptop
+    entities:
+      - category: "phone"
+  - action: utter_ask_camera
+  - intent: give_information
+    entities:
+      - camera: "48 megapixel camera"
+  - action: utter_ask_ram
+  - intent: not_applicable
+  - action: utter_ask_price
+  - intent: give_information
+    entities:
+      - price: "700 usd"
+  - action: action_search_results
+  - intent: greet
+  - action: utter_how_can_I_help
+
+
+- story: laptop_path
+  steps:
+  - intent: greet
+  - action: utter_how_can_I_help
+  - intent: buy_phone_laptop
+    entities:
+      - category: "laptop"
+  - action: utter_ask_camera
+  - intent: not_applicable
+  - action: utter_ask_ram
+  - intent: give_information
+    entities:
+      - ram: "8 GB RAM"
+  - action: utter_ask_price
+  - intent: give_information
+    entities:
+      - price: "700 usd"
+  - action: action_search_results
+  - intent: greet
+  - action: utter_how_can_I_help
+
+
+- story: laptop_phone_path
+  steps:
+  - intent: greet
+  - action: utter_how_can_I_help
+  - intent: buy_phone_laptop
+    entities:
+      - category: "phone"
+  - action: utter_ask_camera
+  - intent: give_information
+    entities:
+      - camera: "48 megapixel camera"
+  - action: utter_ask_ram
+  - intent: give_information
+    entities:
+      - ram: "8 GB RAM"
+  - action: utter_ask_price
+  - intent: give_information
+    entities:
+      - price: "700 usd"
+  - action: action_search_results
+  - intent: greet
+  - action: utter_how_can_I_help

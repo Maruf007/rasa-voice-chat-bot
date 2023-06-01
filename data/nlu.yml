@@ -1,0 +1,70 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - g morning
+    - heya
+- intent: buy_phone_laptop
+  examples: |
+    - I would like to buy a [phone](category)
+    - I want to buy a [phone](category)
+    - I wanna buy a [phone](category)
+    - I want to buy a buy [laptop](category)
+    - I wanna buy a [laptop](category)
+    - can you suggest me a good [mobile]{"entity": "category", "value": "phone"}
+    - please recommend me a good [laptop](category)
+    - i want to purchase a [phone](category)
+    - im intrested in buying a [smartphone]{"entity": "category", "value": "phone"}
+- intent: not_applicable
+  examples: |
+    - not applicable
+    - na
+    - skip
+    - skip it
+- intent: give_information
+  examples: |
+    - Im looking for a [8 GB RAM](ram)
+    - Im looking for a [32 megapixel camera](camera)
+    - My budget is around [500 usd](price)
+    - show me phones with [48 megapixel camera](camera)
+    - please show me laptops with [16 GB RAM](ram)
+    - I can spend around [400 usd](price)
+    - [8 GB RAM](ram)
+    - [64 megapixel camera](camera)
+    - [550 usd](price)
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- synonym: phone
+  examples: |
+    - mobile
+    - smartphone

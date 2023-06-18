@@ -16,11 +16,11 @@ setup(
         'rasa==3.4.6',
         'pyttsx3==2.90',
         'SpeechRecognition==3.8.1',
-        'websockets==10.0',
         'pandas',
         'flask',
         'flask_cors',
-        'pydub'
+        'pydub',
+        'websockets==10.0',
     ],
     package_data={
         'sample': [],
